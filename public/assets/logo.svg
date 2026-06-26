@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="96" fill="#FBF6EE" stroke="#E8DDCB" stroke-width="2"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#E85D2B" stroke-width="2" opacity="0.3"/>
+  <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#7A1F2B">90&K</text>
+  <text x="100" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#7A1F2B">*0?5>0</text>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#E85D2B" letter-spacing="4">NCR</text>
+  <path d="M60 150 Q100 165 140 150" fill="none" stroke="#F4B223" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="28" r="4" fill="#E85D2B" opacity="0.5"/>
+  <circle cx="100" cy="172" r="4" fill="#E85D2B" opacity="0.5"/>
+</svg>
