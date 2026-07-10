@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBF6EE"></stop>
+      <stop offset="35%" stop-color="#FDE4C4"></stop>
+      <stop offset="65%" stop-color="#F4B97A"></stop>
+      <stop offset="100%" stop-color="#E8956A"></stop>
+    </linearGradient>
+    
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C49653"></stop>
+      <stop offset="100%" stop-color="#7A5A2E"></stop>
+    </linearGradient>
+    <linearGradient id="field2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A77E3F"></stop>
+      <stop offset="100%" stop-color="#5A4221"></stop>
+    </linearGradient>
+    <linearGradient id="city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B4438"></stop>
+      <stop offset="100%" stop-color="#3D2418"></stop>
+    </linearGradient>
+    <linearGradient id="cityFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9C6E58" stop-opacity=".7"></stop>
+      <stop offset="100%" stop-color="#5A3B2D" stop-opacity=".85"></stop>
+    </linearGradient>
+    
+    <linearGradient id="leftFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.95"></stop>
+      <stop offset="40%" stop-color="#FBF6EE" stop-opacity="0.65"></stop>
+      <stop offset="70%" stop-color="#FBF6EE" stop-opacity="0.15"></stop>
+      <stop offset="100%" stop-color="#FBF6EE" stop-opacity="0"></stop>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.72" cy="0.35" r="0.18">
+      <stop offset="0%" stop-color="#FFE9B0" stop-opacity="1"></stop>
+      <stop offset="60%" stop-color="#F4B97A" stop-opacity=".5"></stop>
+      <stop offset="100%" stop-color="#F4B97A" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  
+  <rect width="1600" height="900" fill="url(#sky)"></rect>
+
+  
+  <rect width="1600" height="900" fill="url(#sun)"></rect>
+  <circle cx="1150" cy="310" r="48" fill="#FFEABA" opacity="0.85"></circle>
+
+  
+  <g fill="url(#cityFar)">
+    <path d="M0 620 L 0 540 L 60 540 L 60 510 L 110 510 L 110 530 L 160 530 L 160 480 L 220 480 L 220 500 L 280 500 L 280 470 L 340 470 L 340 520 L 400 520 L 400 490 L 470 490 L 470 520 L 540 520 L 540 460 L 600 460 L 600 500 L 670 500 L 670 480 L 740 480 L 740 510 L 820 510 L 820 470 L 900 470 L 900 500 L 980 500 L 980 460 L 1060 460 L 1060 500 L 1140 500 L 1140 480 L 1230 480 L 1230 510 L 1320 510 L 1320 470 L 1410 470 L 1410 500 L 1500 500 L 1500 480 L 1600 480 L 1600 620 Z"></path>
+  </g>
+
+  
+  <g fill="url(#city)">
+    
+    <rect x="900" y="430" width="50" height="190"></rect>
+    <rect x="955" y="380" width="58" height="240"></rect>
+    <rect x="1018" y="410" width="42" height="210"></rect>
+    <rect x="1065" y="350" width="62" height="270"></rect>
+    <rect x="1132" y="395" width="46" height="225"></rect>
+    <rect x="1183" y="370" width="55" height="250"></rect>
+    
+    <polygon points="1240,620 1255,330 1270,620"></polygon>
+    <rect x="1247" y="400" width="16" height="220"></rect>
+    <rect x="1280" y="380" width="60" height="240"></rect>
+    <rect x="1345" y="420" width="48" height="200"></rect>
+    <rect x="1398" y="360" width="58" height="260"></rect>
+    <rect x="1460" y="400" width="50" height="220"></rect>
+    <rect x="1515" y="380" width="55" height="240"></rect>
+    <rect x="1572" y="410" width="28" height="210"></rect>
+
+    
+    <g fill="#F4B223" opacity=".55">
+      <rect x="965" y="400" width="6" height="8"></rect>
+      <rect x="978" y="400" width="6" height="8"></rect>
+      <rect x="991" y="400" width="6" height="8"></rect>
+      <rect x="965" y="430" width="6" height="8"></rect>
+      <rect x="991" y="430" width="6" height="8"></rect>
+      <rect x="965" y="465" width="6" height="8"></rect>
+      <rect x="978" y="465" width="6" height="8"></rect>
+
+      <rect x="1075" y="370" width="6" height="8"></rect>
+      <rect x="1090" y="370" width="6" height="8"></rect>
+      <rect x="1105" y="370" width="6" height="8"></rect>
+      <rect x="1075" y="400" width="6" height="8"></rect>
+      <rect x="1090" y="400" width="6" height="8"></rect>
+      <rect x="1075" y="440" width="6" height="8"></rect>
+      <rect x="1105" y="440" width="6" height="8"></rect>
+
+      <rect x="1290" y="400" width="6" height="8"></rect>
+      <rect x="1305" y="400" width="6" height="8"></rect>
+      <rect x="1320" y="400" width="6" height="8"></rect>
+      <rect x="1290" y="430" width="6" height="8"></rect>
+      <rect x="1320" y="430" width="6" height="8"></rect>
+
+      <rect x="1410" y="380" width="6" height="8"></rect>
+      <rect x="1425" y="380" width="6" height="8"></rect>
+      <rect x="1440" y="380" width="6" height="8"></rect>
+      <rect x="1410" y="420" width="6" height="8"></rect>
+      <rect x="1440" y="420" width="6" height="8"></rect>
+
+      <rect x="1525" y="395" width="6" height="8"></rect>
+      <rect x="1540" y="395" width="6" height="8"></rect>
+      <rect x="1555" y="395" width="6" height="8"></rect>
+      <rect x="1525" y="430" width="6" height="8"></rect>
+    </g>
+  </g>
+
+  
+  <g fill="#7A4A2E">
+    
+    <rect x="100" y="555" width="90" height="65"></rect>
+    <polygon points="100,555 145,520 190,555"></polygon>
+    <rect x="210" y="565" width="70" height="55"></rect>
+    <polygon points="210,565 245,538 280,565"></polygon>
+    
+    <rect x="305" y="510" width="44" height="110"></rect>
+    <polygon points="305,510 327,470 349,510"></polygon>
+    <circle cx="327" cy="465" r="5" fill="#F4B223"></circle>
+    
+    <rect x="370" y="575" width="60" height="45"></rect>
+    <polygon points="370,575 400,548 430,575"></polygon>
+    <rect x="450" y="570" width="80" height="50"></rect>
+    <polygon points="450,570 490,540 530,570"></polygon>
+  </g>
+
+  
+  <g fill="#3D2418">
+    <ellipse cx="60" cy="555" rx="36" ry="42"></ellipse>
+    <rect x="56" y="555" width="8" height="65"></rect>
+    <ellipse cx="555" cy="560" rx="32" ry="38"></ellipse>
+    <rect x="551" y="560" width="8" height="60"></rect>
+    <ellipse cx="700" cy="555" rx="40" ry="46"></ellipse>
+    <rect x="696" y="555" width="8" height="65"></rect>
+  </g>
+
+  
+  <g>
+    
+    <path d="M0 620 L 1600 620 L 1600 720 L 0 720 Z" fill="url(#field)"></path>
+    
+    <g stroke="#8A6534" stroke-width="2" opacity=".55">
+      <path d="M0 640 Q 800 635 1600 642"></path>
+      <path d="M0 655 Q 800 650 1600 657"></path>
+      <path d="M0 670 Q 800 665 1600 673"></path>
+      <path d="M0 685 Q 800 680 1600 688"></path>
+      <path d="M0 700 Q 800 695 1600 703"></path>
+    </g>
+    
+    <path d="M0 720 L 1600 720 L 1600 900 L 0 900 Z" fill="url(#field2)"></path>
+    
+    <g stroke="#3D2418" stroke-width="1.5" opacity=".5">
+      <path d="M0 740 Q 800 735 1600 742"></path>
+      <path d="M0 760 Q 800 755 1600 762"></path>
+      <path d="M0 785 Q 800 780 1600 787"></path>
+      <path d="M0 815 Q 800 810 1600 817"></path>
+      <path d="M0 850 Q 800 845 1600 852"></path>
+    </g>
+    
+    <g fill="#F4B223" opacity=".35">
+      <circle cx="120" cy="745" r="2"></circle>
+      <circle cx="180" cy="755" r="2"></circle>
+      <circle cx="240" cy="748" r="2"></circle>
+      <circle cx="320" cy="760" r="2"></circle>
+      <circle cx="400" cy="752" r="2"></circle>
+      <circle cx="480" cy="758" r="2"></circle>
+      <circle cx="600" cy="750" r="2"></circle>
+      <circle cx="720" cy="762" r="2"></circle>
+      <circle cx="850" cy="755" r="2"></circle>
+      <circle cx="980" cy="748" r="2"></circle>
+      <circle cx="1100" cy="760" r="2"></circle>
+      <circle cx="1220" cy="752" r="2"></circle>
+      <circle cx="1340" cy="758" r="2"></circle>
+      <circle cx="1460" cy="750" r="2"></circle>
+    </g>
+  </g>
+
+  
+  <g fill="none" stroke="#3D2418" stroke-width="1.5" opacity=".55" stroke-linecap="round">
+    <path d="M380 280 q 8 -6 16 0 q 8 -6 16 0"></path>
+    <path d="M520 240 q 6 -5 12 0 q 6 -5 12 0"></path>
+    <path d="M680 300 q 7 -5 14 0 q 7 -5 14 0"></path>
+  </g>
+
+  
+  <rect width="1600" height="900" fill="url(#leftFade)"></rect>
+</svg>

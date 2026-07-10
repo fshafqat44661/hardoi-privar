@@ -3,6 +3,7 @@ export const NAV_ITEMS = [
   { href: '/about', label: 'About' },
   { href: '/purpose', label: 'Purpose' },
   { href: '/events', label: 'Events' },
+  { href: '/blog', label: 'Blog' },
   { href: '/membership', label: 'Membership' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/contact', label: 'Contact' },

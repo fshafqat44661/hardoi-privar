@@ -1,0 +1,180 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "slug": "holi-milan-2026",
+      "tag": "Signature",
+      "cat": "Cultural",
+      "d": "09",
+      "m": "Mar",
+      "media": "saffron",
+      "t": "Holi Milan 2026",
+      "meta": "Noida · 200+ expected",
+      "cat2": "Open to all",
+      "desc": "Our biggest annual gathering — colours, food, folk music and a reunion with the extended parivar.",
+      "img": "/assets/FB_IMG_1777382182880.jpg.jpeg",
+      "venue": "Central Park, Sector 18, Noida",
+      "time": "10:00 AM – 5:00 PM",
+      "organizer": "Hardoi Parivar NCR Events Committee",
+      "phone": "+91 98xxx xxxxx",
+      "details": "Join us for the most vibrant celebration of the year! Holi Milan 2026 brings together 500+ families from across the NCR for a day of colours, music, dance, and togetherness. The event features live dhol, folk performances from Hardoi artists, organic colours, food stalls serving traditional Awadhi cuisine, and a dedicated kids' zone. Every member is welcome to invite extended family. Registration is mandatory for headcount and safety planning.",
+      "gallery": ["/assets/FB_IMG_1777382182880.jpg.jpeg", "/assets/FB_IMG_1777382241376.jpg.jpeg", "/assets/IMG-20260315-WA0152.jpg.jpeg"]
+    },
+    {
+      "id": 2,
+      "slug": "professionals-meetup",
+      "tag": "Coming up",
+      "cat": "Networking",
+      "d": "22",
+      "m": "Apr",
+      "media": "cream",
+      "t": "Professionals Meetup",
+      "meta": "Gurgaon · Evening",
+      "desc": "Members from tech, finance and civil services — informal evening, introductions and mentorship.",
+      "img": "/assets/FB_IMG_1777382189995.jpg.jpeg",
+      "venue": "The Social House, Cyber Hub, Gurgaon",
+      "time": "6:00 PM – 9:00 PM",
+      "organizer": "Parivar Professional Network",
+      "phone": "+91 99xxx xxxxx",
+      "details": "An evening designed for career growth and community bonding. Whether you are a seasoned professional, a fresh graduate, or an entrepreneur — this meetup connects you with fellow Hardoi families working across industries. Expect short talks, open-mic introductions, mentorship pairing, and plenty of networking over chai and snacks. Dress code is smart casual.",
+      "gallery": ["/assets/FB_IMG_1777382189995.jpg.jpeg", "/assets/IMG-20260409-WA0001.jpg.jpeg", "/assets/IMG-20260409-WA0000.jpg.jpeg"]
+    },
+    {
+      "id": 3,
+      "slug": "diwali-mela",
+      "tag": "Annual",
+      "cat": "Festival",
+      "d": "18",
+      "m": "Oct",
+      "media": "maroon",
+      "t": "Diwali Mela",
+      "meta": "Delhi · Family event",
+      "desc": "Crafts, food stalls from Hardoi, children's activities and a community dinner.",
+      "img": "/assets/FB_IMG_1777382221852.jpg.jpeg",
+      "venue": "Talkatora Indoor Stadium, New Delhi",
+      "time": "4:00 PM – 10:00 PM",
+      "organizer": "Hardoi Parivar NCR Cultural Wing",
+      "phone": "+91 98xxx xxxxx",
+      "details": "Diwali Mela is where the entire parivar comes together to celebrate the festival of lights. The mela features handcrafted diyas and decorations from Hardoi artisans, traditional food stalls, rangoli competitions, a children's fancy-dress event, live music, and a grand community dinner. The event concludes with an eco-friendly fireworks display. Every family is encouraged to set up a stall or volunteer.",
+      "gallery": ["/assets/FB_IMG_1777382221852.jpg.jpeg", "/assets/IMG-20260315-WA0046.jpg.jpeg", "/assets/IMG-20260331-WA0041.jpg.jpeg"]
+    },
+    {
+      "id": 4,
+      "slug": "health-camp-hardoi",
+      "tag": "Welfare",
+      "cat": "Seva",
+      "d": "05",
+      "m": "Feb",
+      "media": "sky",
+      "t": "Health Camp — Hardoi",
+      "meta": "Hardoi · Day camp",
+      "desc": "Free check-ups, medicines and doctor consultations organised back in our home district.",
+      "img": "/assets/FB_IMG_1777382223814.jpg.jpeg",
+      "venue": "Government Hospital, Hardoi",
+      "time": "8:00 AM – 4:00 PM",
+      "organizer": "Parivar Seva Committee",
+      "phone": "+91 97xxx xxxxx",
+      "details": "Giving back to our roots. The annual Health Camp in Hardoi provides free medical check-ups, medicines, and specialist consultations to 400+ villagers. Our volunteer doctors from NCR — general physicians, eye specialists, and dental surgeons — travel to Hardoi for a full-day camp. We also distribute hygiene kits and conduct health awareness sessions. Volunteers from NCR are welcome to join and help with logistics and coordination.",
+      "gallery": ["/assets/FB_IMG_1777382223814.jpg.jpeg", "/assets/IMG-20260315-WA0156.jpg.jpeg", "/assets/IMG-20260416-WA0012.jpg.jpeg"]
+    },
+    {
+      "id": 5,
+      "slug": "parivar-cricket-cup",
+      "tag": "Seasonal",
+      "cat": "Sports",
+      "d": "11",
+      "m": "Nov",
+      "media": "cream",
+      "t": "Parivar Cricket Cup",
+      "meta": "Faridabad · Weekend",
+      "desc": "Inter-city friendly tournament — six teams, one trophy, plenty of chai.",
+      "img": "/assets/FB_IMG_1777382231492.jpg.jpeg",
+      "venue": "Manav Rachna Sports Complex, Faridabad",
+      "time": "7:00 AM – 6:00 PM",
+      "organizer": "Parivar Sports Committee",
+      "phone": "+91 96xxx xxxxx",
+      "details": "The Parivar Cricket Cup is the most awaited sporting event of the year. Six teams representing Noida, Delhi, Gurgaon, Ghaziabad, Faridabad, and Hardoi compete in a T-20 format tournament. The day includes opening ceremony, league matches, semi-finals, and the grand final. Families are encouraged to come and cheer. Food stalls, commentary, and trophies make it a complete experience. Player registrations close two weeks before the event.",
+      "gallery": ["/assets/FB_IMG_1777382231492.jpg.jpeg", "/assets/IMG-20260316-WA0046.jpg.jpeg", "/assets/IMG-20260409-WA0002.jpg.jpeg"]
+    }
+  ],
+  "gallery": [
+    { "id": 1, "media": "saffron", "t": "Holi Milan 2025", "m": "March · Noida", "img": "/assets/FB_IMG_1777382241376.jpg.jpeg" },
+    { "id": 2, "media": "maroon", "t": "Diwali Mela 2024", "m": "November · Delhi", "img": "/assets/IMG-20260315-WA0046.jpg.jpeg" },
+    { "id": 3, "media": "cream", "t": "Annual Meetup", "m": "January · Gurgaon", "img": "/assets/IMG-20260315-WA0061.jpg.jpeg" },
+    { "id": 4, "media": "sky", "t": "Health Camp", "m": "February · Hardoi", "img": "/assets/IMG-20260315-WA0156.jpg.jpeg" },
+    { "id": 5, "media": "cream", "t": "Cricket Cup Final", "m": "November · Faridabad", "img": "/assets/IMG-20260316-WA0046.jpg.jpeg" },
+    { "id": 6, "media": "saffron", "t": "Independence Day", "m": "August · Ghaziabad", "img": "/assets/IMG-20260331-WA0041.jpg.jpeg" },
+    { "id": 7, "media": "maroon", "t": "Karwa Chauth", "m": "October · Noida", "img": "/assets/IMG-20260409-WA0000.jpg.jpeg" },
+    { "id": 8, "media": "sky", "t": "Children's Day", "m": "November · Delhi", "img": "/assets/IMG-20260409-WA0001.jpg.jpeg" }
+  ],
+  "fbPosts": [
+    {
+      "id": 1,
+      "a": "HP",
+      "time": "2 days ago",
+      "txt": "📣 Holi Milan 2026 registrations are now OPEN! Join 500+ families this March 9 in Noida for colours, folk music, and the biggest parivar reunion of the year. Early-bird passes available till Feb 15.",
+      "media": "saffron",
+      "img": "/assets/IMG-20260409-WA0002.jpg.jpeg",
+      "likes": 247,
+      "comments": 38,
+      "shares": 12,
+      "emojis": ["❤️", "🎉", "👍"]
+    },
+    {
+      "id": 2,
+      "a": "HP",
+      "time": "1 week ago",
+      "txt": "Thank you to everyone who made our Winter Health Camp in Hardoi a huge success — 420+ villagers received free check-ups, medicines and consultations. A truly special seva drive. 🙏",
+      "media": "sky",
+      "img": "/assets/IMG-20260416-WA0012.jpg.jpeg",
+      "likes": 512,
+      "comments": 64,
+      "shares": 28,
+      "emojis": ["❤️", "🙏", "👍"]
+    },
+    {
+      "id": 3,
+      "a": "HP",
+      "time": "2 weeks ago",
+      "txt": "Mark your calendars: Professionals Meetup on April 22 at Gurgaon. Whether you're in tech, finance, civil services or starting your own venture — come meet the parivar network. Link in bio.",
+      "media": "maroon",
+      "img": "/assets/FB_IMG_1777382182880.jpg.jpeg",
+      "likes": 183,
+      "comments": 21,
+      "shares": 9,
+      "emojis": ["👍", "🎉", "💼"]
+    }
+  ],
+  "youtubeVideos": [
+    { "id": 1, "title": "Holi Milan 2025 — Full Highlights", "thumb": "/assets/FB_IMG_1777382189995.jpg.jpeg", "duration": "12:34", "views": "2.4K", "time": "3 weeks ago" },
+    { "id": 2, "title": "Diwali Mela 2024 — A Night to Remember", "thumb": "/assets/FB_IMG_1777382221852.jpg.jpeg", "duration": "8:21", "views": "1.8K", "time": "5 months ago" },
+    { "id": 3, "title": "Health Camp Hardoi — 420+ Lives Touched", "thumb": "/assets/FB_IMG_1777382223814.jpg.jpeg", "duration": "6:45", "views": "980", "time": "2 months ago" },
+    { "id": 4, "title": "Parivar Cricket Cup 2024 — Final Match", "thumb": "/assets/FB_IMG_1777382231492.jpg.jpeg", "duration": "15:08", "views": "1.2K", "time": "6 months ago" }
+  ],
+  "purposeCards": [
+    { "id": 1, "icon": "Hand", "tone": "", "t": "Mutual Support", "d": "A trusted first call — in medical emergencies, job changes, or life's sudden turns. We look out for one another." },
+    { "id": 2, "icon": "Diya", "tone": "maroon", "t": "Cultural Preservation", "d": "Keeping festivals, food, folk traditions and our Awadhi dialect alive for the next generation in the NCR." },
+    { "id": 3, "icon": "Network", "tone": "marigold", "t": "Community Networking", "d": "Students, professionals and entrepreneurs from Hardoi — connected across industries." },
+    { "id": 4, "icon": "Heart", "tone": "sky", "t": "Social Welfare", "d": "Scholarships, healthcare camps and relief drives back home and in NCR." },
+    { "id": 5, "icon": "Tree", "tone": "", "t": "Shared Legacy", "d": "Stories of our town, its people and its pride — passed on, not lost." }
+  ],
+  "timeline": [
+    { "y": "2014", "t": "A few families, one WhatsApp group", "d": "Founded by six Hardoi families in Noida, initially to celebrate Holi together away from home." },
+    { "y": "2017", "t": "First Diwali Mela", "d": "We grew from a group chat to an annual festival drawing 300+ attendees across NCR." },
+    { "y": "2020", "t": "Parivar during the pandemic", "d": "Organised oxygen, medicine and meal support for members and families back in Hardoi." },
+    { "y": "2024", "t": "1,000+ families strong", "d": "We crossed a thousand verified members and added scholarship and health programmes." }
+  ],
+  "membershipBenefits": [
+    "A trusted network of 1,000+ parivar members across NCR",
+    "Priority access to Holi Milan, Diwali Mela and meetups",
+    "Mentorship, referrals and career guidance from members",
+    "Community support in medical and emergency situations",
+    "Cultural programmes, children's events and classes"
+  ],
+  "contactInfo": [
+    { "icon": "Phone", "l": "Phone", "v": "+91 11 4000 0000", "s": "Mon–Sat · 10 am – 7 pm" },
+    { "icon": "Whatsapp", "l": "WhatsApp", "v": "+91 98xxx xxxxx", "s": "Fastest way to reach us" },
+    { "icon": "Mail", "l": "Email", "v": "namaste@hardoiparivar.org", "s": "For formal requests" },
+    { "icon": "Pin", "l": "Meetup points", "v": "Sector 18, Noida · CP, Delhi", "s": "Monthly chai — 2nd Sunday" }
+  ]
+}

@@ -13,7 +13,7 @@ if (!MONGODB_URI) {
   process.exit(1);
 }
 
-const seedPath = resolve(process.cwd(), '../hr-project/src/data/db.json');
+const seedPath = resolve(process.cwd(), 'src/data/db.json');
 const data = JSON.parse(readFileSync(seedPath, 'utf-8'));
 
 async function seed() {

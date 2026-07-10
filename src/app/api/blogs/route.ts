@@ -1,16 +1,20 @@
+import { NextRequest } from 'next/server';
 import { ok, fail } from '@/lib/api/response';
-import { connectDB } from '@/lib/db/connect';
-import { mapBlogPost } from '@/lib/mappers';
-import { BlogPost } from '@/models/BlogPost';
+import { getBlogBySlug, getBlogs } from '@/lib/services/content.service';
 
-/** Public blog listing — returns published posts only */
-export async function GET() {
+/** Public blog listing — published posts only. Optional ?slug= for a single post. */
+export async function GET(req: NextRequest) {
   try {
-    await connectDB();
-    const docs = await BlogPost.find({ published: true })
-      .sort({ publishedAt: -1 })
-      .lean();
-    return ok(docs.map((d) => mapBlogPost(d as never)));
+    const slug = req.nextUrl.searchParams.get('slug');
+    if (slug) {
+      const post = await getBlogBySlug(slug);
+      if (!post) return fail('Post not found', 404);
+      return ok(post);
+    }
+
+    const limitParam = req.nextUrl.searchParams.get('limit');
+    const limit = limitParam ? Number(limitParam) : undefined;
+    return ok(await getBlogs(Number.isFinite(limit) ? limit : undefined));
   } catch {
     return fail('Failed to fetch blogs', 500);
   }

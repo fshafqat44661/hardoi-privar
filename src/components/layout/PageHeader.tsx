@@ -43,9 +43,9 @@ export default function PageHeader({
             src={bannerImg}
             alt=""
             aria-hidden
-            className="absolute inset-[-10px] z-[1] h-[calc(100%+20px)] w-[calc(100%+20px)] object-cover blur-[1.5px]"
+            className="absolute inset-0 z-[1] h-full w-full object-cover object-[center_25%]"
           />
-          <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/70 via-black/45 to-black/35" />
+          <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/70 via-black/45 to-black/30" />
         </>
       )}
       <div

@@ -8,7 +8,7 @@ export async function GET() {
   if (!token) return fail('Unauthorized', 401);
 
   try {
-    return ok(toAuthUser(verifyToken(token)));
+    return ok(toAuthUser(await verifyToken(token)));
   } catch {
     return fail('Unauthorized', 401);
   }

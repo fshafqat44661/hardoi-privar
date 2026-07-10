@@ -119,6 +119,7 @@ export function mapDonation(doc: Document & Record<string, unknown>): DonationDT
 }
 
 export function mapBlogPost(doc: Document & Record<string, unknown>): BlogPostDTO {
+  const category = String(doc.category ?? 'Blogs');
   return {
     id: idOf(doc as { _id: Types.ObjectId }),
     slug: String(doc.slug),
@@ -126,9 +127,37 @@ export function mapBlogPost(doc: Document & Record<string, unknown>): BlogPostDT
     excerpt: String(doc.excerpt ?? ''),
     content: String(doc.content ?? ''),
     coverImage: doc.coverImage ? String(doc.coverImage) : undefined,
+    category: (['Events', 'News', 'Stories', 'Blogs'].includes(category)
+      ? category
+      : 'Blogs') as BlogPostDTO['category'],
     author: String(doc.author ?? ''),
     published: Boolean(doc.published),
     publishedAt: doc.publishedAt ? new Date(String(doc.publishedAt)).toISOString() : undefined,
+    createdAt: new Date(String(doc.createdAt)).toISOString(),
+    updatedAt: doc.updatedAt ? new Date(String(doc.updatedAt)).toISOString() : undefined,
+  };
+}
+
+export function mapMembershipSubmission(doc: Document & Record<string, unknown>) {
+  return {
+    id: idOf(doc as { _id: Types.ObjectId }),
+    name: String(doc.name ?? ''),
+    phone: String(doc.phone ?? ''),
+    city: String(doc.city ?? ''),
+    status: doc.status as 'pending' | 'contacted' | 'approved',
+    createdAt: new Date(String(doc.createdAt)).toISOString(),
+  };
+}
+
+export function mapContactSubmission(doc: Document & Record<string, unknown>) {
+  return {
+    id: idOf(doc as { _id: Types.ObjectId }),
+    name: String(doc.name ?? ''),
+    email: doc.email ? String(doc.email) : undefined,
+    phone: String(doc.phone ?? ''),
+    topic: String(doc.topic ?? ''),
+    message: String(doc.message ?? ''),
+    status: doc.status as 'new' | 'read' | 'replied',
     createdAt: new Date(String(doc.createdAt)).toISOString(),
   };
 }

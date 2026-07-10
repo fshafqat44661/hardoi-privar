@@ -3,7 +3,10 @@
 import { useState } from 'react';
 import { useAppDispatch } from '@/hooks/useStore';
 import { submitContact } from '@/store/thunks/forms';
+import FormSelect from '@/components/ui/FormSelect';
 import Icon from '@/components/ui/Icons';
+
+const TOPICS = ['General', 'Membership', 'Events', 'Volunteering', 'Welfare / Help'] as const;
 
 export default function ContactForm() {
   const dispatch = useAppDispatch();
@@ -53,15 +56,11 @@ export default function ContactForm() {
           </label>
           <label className="mt-4 block">
             <span className="form-label">Topic</span>
-            <select className="form-input" value={form.topic} onChange={(e) => setForm({ ...form, topic: e.target.value })}>
-                  {['General', 'Membership', 'Events', 'Volunteering', 'Welfare / Help'].map((t) => (
-                <option key={t}>{t}</option>
-              ))}
-            </select>
+            <FormSelect value={form.topic} onChange={(topic) => setForm({ ...form, topic })} options={TOPICS} />
           </label>
           <label className="mt-4 block">
             <span className="form-label">Message</span>
-            <textarea className="form-input min-h-[100px] resize-y" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <textarea className="form-input" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </label>
           {error && <p className="mt-3 text-sm text-primary-deep">{error}</p>}
           <button type="submit" className="btn btn-primary mt-6" disabled={loading}>

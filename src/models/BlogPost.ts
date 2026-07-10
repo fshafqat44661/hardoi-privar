@@ -1,6 +1,6 @@
 import mongoose, { Schema, type InferSchemaType, type Model } from 'mongoose';
+import { BLOG_CATEGORIES } from '@/types';
 
-/** Blog schema — routes reserved for future release */
 const BlogPostSchema = new Schema(
   {
     slug: { type: String, required: true, unique: true, index: true },
@@ -8,6 +8,12 @@ const BlogPostSchema = new Schema(
     excerpt: { type: String, default: '' },
     content: { type: String, default: '' },
     coverImage: String,
+    category: {
+      type: String,
+      enum: BLOG_CATEGORIES,
+      default: 'Blogs',
+      index: true,
+    },
     author: { type: String, default: 'Hardoi Parivar NCR' },
     published: { type: Boolean, default: false, index: true },
     publishedAt: Date,

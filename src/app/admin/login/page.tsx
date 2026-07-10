@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { clearAuthError, fetchMe, login } from '@/store/slices/authSlice';
 import Button from '@/components/ui/Button';
+import Icon from '@/components/ui/Icons';
 
 export default function AdminLoginPage() {
   const dispatch = useAppDispatch();
@@ -12,6 +13,7 @@ export default function AdminLoginPage() {
   const { user, status, error } = useAppSelector((s) => s.auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     dispatch(fetchMe());
@@ -25,7 +27,10 @@ export default function AdminLoginPage() {
     e.preventDefault();
     dispatch(clearAuthError());
     const result = await dispatch(login({ email, password }));
-    if (login.fulfilled.match(result)) router.replace('/admin');
+    if (login.fulfilled.match(result)) {
+      // Full navigation ensures the auth cookie is sent on the next request
+      window.location.assign('/admin');
+    }
   }
 
   return (
@@ -40,7 +45,24 @@ export default function AdminLoginPage() {
           </label>
           <label className="block">
             <span className="form-label">Password</span>
-            <input className="form-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <div className="relative">
+              <input
+                className="form-input pr-11"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="current-password"
+              />
+              <button
+                type="button"
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-ink-2 transition hover:text-ink"
+                onClick={() => setShowPassword((v) => !v)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? <Icon.EyeOff /> : <Icon.Eye />}
+              </button>
+            </div>
           </label>
         </div>
         {error && <p className="mt-3 text-sm text-primary-deep">{error}</p>}

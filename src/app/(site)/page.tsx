@@ -3,22 +3,29 @@ import Strip from '@/components/home/Strip';
 import About from '@/components/home/About';
 import Purpose from '@/components/home/Purpose';
 import EventsSection from '@/components/home/EventsSection';
+import BlogSection from '@/components/home/BlogSection';
 import SocialSection from '@/components/home/SocialSection';
 import JoinBand from '@/components/home/JoinBand';
+import Stats from '@/components/home/Stats';
+import GalleryPreview from '@/components/home/GalleryPreview';
+import Testimonials from '@/components/home/Testimonials';
+import FinalCTA from '@/components/home/FinalCTA';
 import {
+  getBlogs,
   getEvents,
   getFacebookPosts,
+  getGalleryItems,
   getMembershipBenefits,
   getPurposeCards,
-  getYoutubeVideos,
 } from '@/lib/services/content.service';
 
 export default async function HomePage() {
-  const [events, purposeCards, fbPosts, youtubeVideos, benefits] = await Promise.all([
+  const [events, blogs, purposeCards, fbPosts, galleryItems, benefits] = await Promise.all([
     getEvents(),
+    getBlogs(5),
     getPurposeCards(),
     getFacebookPosts(),
-    getYoutubeVideos(),
+    getGalleryItems(),
     getMembershipBenefits(),
   ]);
 
@@ -29,8 +36,13 @@ export default async function HomePage() {
       <About />
       <Purpose cards={purposeCards} />
       <EventsSection initialEvents={events} limit={5} />
-      <SocialSection fbPosts={fbPosts} youtubeVideos={youtubeVideos} />
+      <BlogSection posts={blogs} limit={5} />
       <JoinBand benefits={benefits} />
+      <Stats />
+      <GalleryPreview items={galleryItems} />
+      <Testimonials />
+      <SocialSection fbPosts={fbPosts} />
+      <FinalCTA />
     </>
   );
 }

@@ -2,9 +2,17 @@ import Icon, { StarSvg } from '@/components/ui/Icons';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-14 md:py-[72px]">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <section className="hero-section relative overflow-hidden py-14 md:py-[72px]">
+      <div className="hero-bg pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-[180px] -top-[180px] h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(244,178,35,.18),transparent_70%)] blur-[10px]" />
+        <div
+          className="absolute inset-0 bg-[url('/assets/hero-bg.svg')] bg-cover bg-[center_bottom] bg-no-repeat opacity-55 mix-blend-multiply"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(251,246,238,.5)_0%,transparent_30%,transparent_70%,rgba(251,246,238,.7)_100%),linear-gradient(90deg,rgba(251,246,238,.7)_0%,transparent_45%)]"
+          aria-hidden
+        />
       </div>
 
       <div className="container relative z-[1]">

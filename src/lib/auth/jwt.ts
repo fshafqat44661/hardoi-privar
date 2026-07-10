@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import type { AuthUser } from '@/types';
 
@@ -13,14 +13,35 @@ export interface JwtPayload {
   role: AuthUser['role'];
 }
 
-export function signToken(payload: JwtPayload): string {
+function getSecretKey() {
   if (!JWT_SECRET) throw new Error('JWT_SECRET is not configured');
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN as jwt.SignOptions['expiresIn'] });
+  return new TextEncoder().encode(JWT_SECRET);
 }
 
-export function verifyToken(token: string): JwtPayload {
-  if (!JWT_SECRET) throw new Error('JWT_SECRET is not configured');
-  return jwt.verify(token, JWT_SECRET) as JwtPayload;
+/** Edge + Node compatible — safe for middleware and API routes */
+export async function signToken(payload: JwtPayload): Promise<string> {
+  return new SignJWT({
+    email: payload.email,
+    name: payload.name,
+    role: payload.role,
+  })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setSubject(payload.sub)
+    .setIssuedAt()
+    .setExpirationTime(JWT_EXPIRES_IN)
+    .sign(getSecretKey());
+}
+
+export async function verifyToken(token: string): Promise<JwtPayload> {
+  const { payload } = await jwtVerify(token, getSecretKey());
+  if (!payload.sub) throw new Error('Invalid token');
+
+  return {
+    sub: payload.sub,
+    email: String(payload.email ?? ''),
+    name: String(payload.name ?? ''),
+    role: payload.role as AuthUser['role'],
+  };
 }
 
 export function toAuthUser(payload: JwtPayload): AuthUser {
@@ -39,7 +60,7 @@ export async function getAuthUser(): Promise<AuthUser | null> {
   if (!token) return null;
 
   try {
-    return toAuthUser(verifyToken(token));
+    return toAuthUser(await verifyToken(token));
   } catch {
     return null;
   }

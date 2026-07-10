@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useAppDispatch } from '@/hooks/useStore';
 import { submitDonation } from '@/store/thunks/forms';
 import { DONATION_PURPOSES } from '@/config/site';
+import FormSelect from '@/components/ui/FormSelect';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icons';
 
@@ -103,16 +104,16 @@ export default function DonationForm() {
             </label>
             <label className="block">
               <span className="form-label">Purpose</span>
-              <select className="form-input" value={form.purpose} onChange={(e) => setForm({ ...form, purpose: e.target.value })}>
-                {DONATION_PURPOSES.map((p) => (
-                  <option key={p}>{p}</option>
-                ))}
-              </select>
+              <FormSelect
+                value={form.purpose}
+                onChange={(purpose) => setForm({ ...form, purpose })}
+                options={DONATION_PURPOSES}
+              />
             </label>
             <label className="block sm:col-span-2">
               <span className="form-label">Message (optional)</span>
               <textarea
-                className="form-input min-h-[100px] resize-y"
+                className="form-input"
                 rows={3}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}

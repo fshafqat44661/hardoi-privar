@@ -3,7 +3,10 @@
 import { useState } from 'react';
 import { useAppDispatch } from '@/hooks/useStore';
 import { submitMembership } from '@/store/thunks/forms';
+import FormSelect from '@/components/ui/FormSelect';
 import Icon from '@/components/ui/Icons';
+
+const CITIES = ['Delhi', 'Noida', 'Gurgaon', 'Ghaziabad', 'Faridabad', 'Other NCR'] as const;
 
 interface JoinBandProps {
   benefits: string[];
@@ -86,15 +89,7 @@ export default function JoinBand({ benefits }: JoinBandProps) {
                     />
                   </Field>
                   <Field label="City">
-                    <select
-                      className="form-input"
-                      value={form.city}
-                      onChange={(e) => setForm({ ...form, city: e.target.value })}
-                    >
-                      {['Delhi', 'Noida', 'Gurgaon', 'Ghaziabad', 'Faridabad', 'Other NCR'].map((c) => (
-                        <option key={c}>{c}</option>
-                      ))}
-                    </select>
+                    <FormSelect value={form.city} onChange={(city) => setForm({ ...form, city })} options={CITIES} />
                   </Field>
                 </div>
               </div>

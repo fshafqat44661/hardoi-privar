@@ -113,19 +113,19 @@ a:not(.btn) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 14px 0;
+  gap: 20px;
+  padding: 8px 0;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .brand-mark {
-  width: 100px;
-  height: 100px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: white;
   overflow: hidden;
@@ -144,11 +144,13 @@ a:not(.btn) {
   display: flex;
   flex-direction: column;
   line-height: 1.05;
+  border-left: 1px solid var(--color-line);
+  padding-left: 12px;
 }
 
 .brand-text .hi {
   font-family: var(--font-deva);
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-maroon);
   font-weight: 600;
   line-height: 1.1;
@@ -156,12 +158,12 @@ a:not(.btn) {
 
 .brand-text .en {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--color-ink-2);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .nav {
@@ -291,6 +293,25 @@ img {
 .form-input:focus {
   outline: 2px solid color-mix(in oklab, var(--color-primary) 35%, white);
   outline-offset: 1px;
+  border-color: var(--color-primary);
+  background: white;
+}
+
+.form-select-trigger {
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.form-select-trigger:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 22%, var(--color-line));
+  background: white;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 240px;
+  line-height: 1.55;
 }
 
 .form-error {
@@ -314,12 +335,45 @@ img {
   animation: floaty 6s ease-in-out infinite;
 }
 
+.gallery-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .gallery-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.final-cta {
+  background:
+    radial-gradient(ellipse at 80% 30%, rgba(244, 178, 35, 0.18), transparent 60%),
+    radial-gradient(ellipse at 10% 80%, rgba(122, 31, 43, 0.25), transparent 55%),
+    linear-gradient(160deg, #2a1410 0%, #4a1a18 50%, #7a1f2b 100%);
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(244, 178, 35, 0.25) 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(232, 93, 43, 0.3) 1px, transparent 2px),
+    radial-gradient(circle at 40% 90%, rgba(255, 255, 255, 0.2) 1px, transparent 2px);
+  background-size: 110px 110px, 140px 140px, 90px 90px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 /* Page banner — overrides .eyebrow orange on dark hero backgrounds */
 .page-banner {
   position: relative;
-  padding: 80px 0 52px;
+  padding: 64px 0 48px;
   overflow: hidden;
-  min-height: 300px;
+  min-height: 280px;
 }
 
 .page-banner-content {

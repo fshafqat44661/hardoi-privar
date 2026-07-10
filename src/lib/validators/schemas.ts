@@ -34,6 +34,37 @@ export const blogPostSchema = z.object({
   excerpt: z.string().optional(),
   content: z.string().optional(),
   coverImage: z.string().optional(),
+  category: z.enum(['Events', 'News', 'Stories', 'Blogs']).optional(),
   author: z.string().optional(),
   published: z.boolean().optional(),
+});
+
+export const donationStatusSchema = z.object({
+  status: z.enum(['pending', 'confirmed', 'failed']),
+});
+
+export const membershipStatusSchema = z.object({
+  status: z.enum(['pending', 'contacted', 'approved']),
+});
+
+export const contactStatusSchema = z.object({
+  status: z.enum(['new', 'read', 'replied']),
+});
+
+export const eventUpdateSchema = z.object({
+  tag: z.string().optional(),
+  cat: z.string().optional(),
+  d: z.string().optional(),
+  m: z.string().optional(),
+  media: z.enum(['saffron', 'maroon', 'cream', 'sky', 'marigold']).optional(),
+  t: z.string().optional(),
+  meta: z.string().optional(),
+  cat2: z.string().optional(),
+  desc: z.string().optional(),
+  img: z.string().optional(),
+  venue: z.string().optional(),
+  time: z.string().optional(),
+  organizer: z.string().optional(),
+  phone: z.string().optional(),
+  details: z.string().optional(),
 });

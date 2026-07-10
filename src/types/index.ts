@@ -90,6 +90,10 @@ export interface DonationDTO {
   createdAt: string;
 }
 
+export type BlogCategory = 'Events' | 'News' | 'Stories' | 'Blogs';
+
+export const BLOG_CATEGORIES: BlogCategory[] = ['Events', 'News', 'Stories', 'Blogs'];
+
 export interface BlogPostDTO {
   id: string;
   slug: string;
@@ -97,10 +101,40 @@ export interface BlogPostDTO {
   excerpt: string;
   content: string;
   coverImage?: string;
+  category: BlogCategory;
   author: string;
   published: boolean;
   publishedAt?: string;
   createdAt: string;
+  updatedAt?: string;
+}
+
+export interface MembershipSubmissionDTO {
+  id: string;
+  name: string;
+  phone: string;
+  city: string;
+  status: 'pending' | 'contacted' | 'approved';
+  createdAt: string;
+}
+
+export interface ContactSubmissionDTO {
+  id: string;
+  name: string;
+  email?: string;
+  phone: string;
+  topic: string;
+  message: string;
+  status: 'new' | 'read' | 'replied';
+  createdAt: string;
+}
+
+export interface AdminStatsDTO {
+  donations: { total: number; pending: number };
+  blog: { total: number; published: number; drafts: number };
+  events: number;
+  membership: { total: number; pending: number };
+  contact: { total: number; new: number };
 }
 
 export interface AuthUser {
