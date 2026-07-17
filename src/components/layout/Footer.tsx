@@ -46,9 +46,21 @@ export default function Footer() {
           <div>
             <h4 className="font-head text-lg">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-ink-2">
-              <li><a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="inline-flex items-center hover:text-ink"><Icon.Phone /> &nbsp;{SITE.phone}</a></li>
-              <li><a href={`mailto:${SITE.email}`} className="inline-flex items-center hover:text-ink"><Icon.Mail /> &nbsp;{SITE.email}</a></li>
-              <li><span className="inline-flex items-center"><Icon.Pin /> &nbsp;Delhi · Noida · Gurgaon</span></li>
+              <li>
+                <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="inline-flex flex-wrap items-center gap-1 hover:text-ink">
+                  <Icon.Phone /> {SITE.phone}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${SITE.email}`} className="inline-flex max-w-full flex-wrap items-center gap-1 break-all hover:text-ink">
+                  <Icon.Mail /> {SITE.email}
+                </a>
+              </li>
+              <li>
+                <span className="inline-flex items-center gap-1">
+                  <Icon.Pin /> Delhi · Noida · Gurgaon
+                </span>
+              </li>
             </ul>
             <div className="mt-3.5 flex gap-2.5 text-ink-2">
               <a href="#" aria-label="WhatsApp"><Icon.Whatsapp /></a>

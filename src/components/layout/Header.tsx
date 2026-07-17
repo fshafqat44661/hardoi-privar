@@ -21,6 +21,15 @@ export default function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileOpen]);
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
@@ -29,12 +38,12 @@ export default function Header() {
   return (
     <header className={`header${scrolled ? ' scrolled' : ''}`}>
       <div className="container header-inner">
-        <Link className="brand" href="/">
+        <Link className="brand min-w-0" href="/">
           <div className="brand-mark">
             <img src="/assets/logo.png" alt="Hardoi Parivar logo" />
           </div>
-          <div className="brand-text">
-            <span className="hi">हरदोई परिवार</span>
+          <div className="brand-text min-w-0">
+            <span className="hi truncate">हरदोई परिवार</span>
             <span className="en">Hardoi Parivar · NCR</span>
           </div>
         </Link>
@@ -47,38 +56,44 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="header-cta">
+        <div className="header-cta shrink-0">
           <Link className="btn btn-primary btn-sm" href="/membership">
             Join Now <Icon.ArrowRight />
           </Link>
           <button
             type="button"
             className="menu-toggle"
-            aria-label="Menu"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
           >
-            <Icon.Menu />
+            {mobileOpen ? <Icon.Close /> : <Icon.Menu />}
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <div style={{ borderTop: '1px solid var(--color-line)', background: 'var(--color-cream)' }}>
-          <div className="container" style={{ padding: '12px 0', display: 'flex', flexDirection: 'column' }}>
+        <div className="border-t border-line bg-cream md:max-h-[calc(100dvh-64px)] md:overflow-y-auto">
+          <div className="container flex flex-col gap-1 py-3">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                style={{
-                  padding: '10px 0',
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: isActive(item.href) ? 'var(--color-ink)' : 'var(--color-ink-2)',
-                }}
+                className={`rounded-xl px-3 py-3 text-[15px] font-medium ${
+                  isActive(item.href) ? 'bg-cream-2 text-ink' : 'text-ink-2'
+                }`}
+                onClick={() => setMobileOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
+            <Link
+              className="btn btn-primary mt-2 w-full"
+              href="/membership"
+              onClick={() => setMobileOpen(false)}
+            >
+              Join Now <Icon.ArrowRight />
+            </Link>
           </div>
         </div>
       )}
