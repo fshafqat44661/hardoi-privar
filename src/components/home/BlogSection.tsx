@@ -53,26 +53,26 @@ export default function BlogSection({ posts, limit = 5, showHead = true }: BlogS
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-12 md:py-24">
       <div className="container">
         {showHead && (
-          <div className="mb-12 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+          <div className="mb-8 flex flex-col items-start justify-between gap-6 md:mb-12 lg:flex-row lg:items-end">
             <div>
               <span className="eyebrow">Stories & Updates</span>
-              <h2 className="font-head mt-4 max-w-[18ch] text-[clamp(32px,4vw,52px)] leading-[1.05]">
+              <h2 className="font-head mt-4 max-w-[18ch] text-[clamp(28px,7vw,52px)] leading-[1.05]">
                 Our community
                 <br />
                 gathering.
               </h2>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex max-w-full flex-wrap gap-2">
               {FILTERS.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setFilter(cat)}
                   className={cn(
-                    'rounded-full border px-3.5 py-2 text-[13px] font-medium transition',
+                    'rounded-full border px-3 py-1.5 text-[12px] font-medium transition sm:px-3.5 sm:py-2 sm:text-[13px]',
                     filter === cat
                       ? 'border-ink bg-ink text-white'
                       : 'border-line bg-white text-ink-2 hover:border-ink-2 hover:text-ink',
@@ -86,14 +86,14 @@ export default function BlogSection({ posts, limit = 5, showHead = true }: BlogS
         )}
 
         {!showHead && (
-          <div className="mb-8 flex flex-wrap gap-2">
+          <div className="mb-6 flex max-w-full flex-wrap gap-2 md:mb-8">
             {FILTERS.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setFilter(cat)}
                 className={cn(
-                  'rounded-full border px-3.5 py-2 text-[13px] font-medium transition',
+                  'rounded-full border px-3 py-1.5 text-[12px] font-medium transition sm:px-3.5 sm:py-2 sm:text-[13px]',
                   filter === cat
                     ? 'border-ink bg-ink text-white'
                     : 'border-line bg-white text-ink-2 hover:border-ink-2 hover:text-ink',
@@ -110,9 +110,9 @@ export default function BlogSection({ posts, limit = 5, showHead = true }: BlogS
             No posts in this category yet.
           </p>
         ) : (
-          <div className="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
+          <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
             {featured && <BlogCard post={featured} featured />}
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
               {rest.map((post) => (
                 <BlogCard key={post.id} post={post} />
               ))}
@@ -161,7 +161,7 @@ function BlogCard({ post, featured = false }: { post: BlogPostDTO; featured?: bo
           </span>
           {date && <span className="text-ink-2">{date}</span>}
         </div>
-        <h3 className={cn('font-head leading-tight text-ink', featured ? 'text-[28px]' : 'text-[18px]')}>
+        <h3 className={cn('font-head leading-tight text-ink', featured ? 'text-[22px] sm:text-[28px]' : 'text-[17px] sm:text-[18px]')}>
           {post.title}
         </h3>
         {post.excerpt && (
