@@ -55,7 +55,7 @@ export default function DonationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-[20px] border border-line bg-white p-7 shadow-soft">
+    <form onSubmit={handleSubmit} className="rounded-[20px] border border-line bg-white p-5 shadow-soft sm:p-7">
       {!done ? (
         <>
           <div className="font-head text-2xl">Make a donation</div>
