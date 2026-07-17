@@ -64,7 +64,7 @@ export default function JoinBand({ benefits }: JoinBandProps) {
           </ul>
         </div>
 
-        <form onSubmit={handleSubmit} noValidate className="rounded-[20px] border border-white/10 bg-white p-7 text-ink">
+        <form onSubmit={handleSubmit} noValidate className="rounded-[20px] border border-white/10 bg-white p-5 text-ink sm:p-7">
           {!done ? (
             <>
               <div className="font-head text-2xl">Quick registration</div>

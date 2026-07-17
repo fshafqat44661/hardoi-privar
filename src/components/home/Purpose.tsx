@@ -32,7 +32,7 @@ export default function Purpose({ cards, showHead = true }: PurposeProps) {
           {cards.map((card, i) => (
             <article
               key={card.id}
-              className={`flex min-h-[220px] flex-col gap-3.5 rounded-xl border border-line bg-white p-7 transition hover:-translate-y-0.5 hover:shadow-card ${
+              className={`flex min-h-[200px] flex-col gap-3.5 rounded-xl border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-card sm:min-h-[220px] sm:p-7 ${
                 i < 2 ? 'lg:col-span-3' : 'lg:col-span-2'
               }`}
             >
