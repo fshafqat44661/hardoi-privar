@@ -35,11 +35,11 @@ export default function GalleryPreview({ items }: GalleryPreviewProps) {
             return (
               <div
                 key={tile.id}
-                className={`group relative overflow-hidden rounded-xl border border-line transition hover:scale-[1.02] ${
-                  layout === 'tall' ? 'row-span-2' : layout === 'wide' ? 'col-span-2' : ''
+                className={`gallery-tile group relative overflow-hidden rounded-xl border border-line transition hover:scale-[1.02] ${
+                  layout === 'tall' ? 'gallery-tile-tall row-span-2 max-sm:row-span-1' : layout === 'wide' ? 'gallery-tile-wide col-span-2 max-sm:col-span-1' : ''
                 }`}
               >
-                <div className={`relative h-full min-h-[180px] ${eventMediaClass[tile.media]}`}>
+                <div className={`relative h-full min-h-[120px] sm:min-h-[180px] ${eventMediaClass[tile.media]}`}>
                   {tile.img && (
                     <img src={tile.img} alt={tile.t} className="absolute inset-0 h-full w-full object-cover" />
                   )}

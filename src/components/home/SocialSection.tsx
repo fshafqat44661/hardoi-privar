@@ -80,16 +80,16 @@ export default function SocialSection({ fbPosts }: SocialSectionProps) {
           <WhatsAppFeed />
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_6px_18px_rgba(24,119,242,.28)]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#1877F2] px-5 py-3.5 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(24,119,242,.28)] sm:w-auto sm:px-6 sm:text-[15px]"
           >
             <Icon.Facebook /> Visit Facebook Page
           </a>
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_6px_18px_rgba(37,211,102,.28)]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(37,211,102,.28)] sm:w-auto sm:px-6 sm:text-[15px]"
           >
             <Icon.Whatsapp /> Join WhatsApp Community
           </a>
@@ -102,20 +102,20 @@ export default function SocialSection({ fbPosts }: SocialSectionProps) {
 function FacebookFeed({ posts }: { posts: FacebookPostDTO[] }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-[20px] border border-line bg-white">
-      <div className="flex items-center gap-3.5 border-b border-line px-5 py-[18px]">
-        <div className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-[#1877F2]">
+      <div className="flex items-center gap-3 border-b border-line px-4 py-4 sm:gap-3.5 sm:px-5 sm:py-[18px]">
+        <div className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full bg-[#1877F2] sm:h-11 sm:w-11">
           <img src="/assets/logo.png" alt="" className="h-full w-full bg-white object-contain p-1" />
         </div>
-        <div className="flex-1">
-          <div className="flex items-center gap-1.5 text-[15px] font-semibold">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5 truncate text-[14px] font-semibold sm:text-[15px]">
             Hardoi Parivar NCR
             <span className="text-[#1877F2]" title="Verified">
               ✓
             </span>
           </div>
-          <div className="text-xs text-ink-2">2,340 followers · Community organisation</div>
+          <div className="truncate text-[11px] text-ink-2 sm:text-xs">2,340 followers · Community organisation</div>
         </div>
-        <button type="button" className="rounded-lg bg-[#1877F2] px-3.5 py-1.5 text-[13px] font-semibold text-white">
+        <button type="button" className="shrink-0 rounded-lg bg-[#1877F2] px-3 py-1.5 text-[12px] font-semibold text-white sm:px-3.5 sm:text-[13px]">
           Follow
         </button>
       </div>
@@ -165,16 +165,16 @@ function FacebookFeed({ posts }: { posts: FacebookPostDTO[] }) {
 function WhatsAppFeed() {
   return (
     <div className="flex flex-col overflow-hidden rounded-[20px] border border-line bg-white">
-      <div className="flex items-center gap-3.5 border-b border-line px-5 py-[18px]">
-        <div className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-[#25D366]">
+      <div className="flex items-center gap-3 border-b border-line px-4 py-4 sm:gap-3.5 sm:px-5 sm:py-[18px]">
+        <div className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full bg-[#25D366] sm:h-11 sm:w-11">
           <img src="/assets/logo.png" alt="" className="h-full w-full bg-white object-contain p-1" />
         </div>
-        <div className="flex-1">
-          <div className="text-[15px] font-semibold">Hardoi Parivar · NCR</div>
-          <div className="text-xs text-ink-2">🟢 247 members · 12 online</div>
+        <div className="min-w-0 flex-1">
+          <div className="truncate text-[14px] font-semibold sm:text-[15px]">Hardoi Parivar · NCR</div>
+          <div className="truncate text-[11px] text-ink-2 sm:text-xs">🟢 247 members · 12 online</div>
         </div>
-        <button type="button" className="rounded-lg bg-[#25D366] px-3.5 py-1.5 text-[13px] font-semibold text-white">
-          Join Group
+        <button type="button" className="shrink-0 rounded-lg bg-[#25D366] px-3 py-1.5 text-[12px] font-semibold text-white sm:px-3.5 sm:text-[13px]">
+          Join
         </button>
       </div>
 

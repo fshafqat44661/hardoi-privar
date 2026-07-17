@@ -53,10 +53,10 @@ export default function Testimonials() {
           {QUOTES.map((q) => (
             <article
               key={q.name}
-              className="flex flex-col gap-5 rounded-[20px] border border-line bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-card"
+              className="flex flex-col gap-5 rounded-[20px] border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-card sm:p-8"
             >
-              <div className="font-head text-[60px] leading-[0.5] text-primary">&ldquo;</div>
-              <div className="font-head flex-1 text-lg leading-snug text-ink">{q.txt}</div>
+              <div className="font-head text-[48px] leading-[0.5] text-primary sm:text-[60px]">&ldquo;</div>
+              <div className="font-head flex-1 text-base leading-snug text-ink sm:text-lg">{q.txt}</div>
               <div className="flex items-center gap-3 border-t border-line pt-[18px]">
                 <div className={`grid h-11 w-11 place-items-center rounded-full text-sm font-semibold ${q.av}`}>
                   {q.initials}
