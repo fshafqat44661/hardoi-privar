@@ -35,7 +35,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-[20px] border border-line bg-white p-7">
+    <form onSubmit={handleSubmit} className="rounded-[20px] border border-line bg-white p-5 sm:p-7">
       {!sent ? (
         <>
           <div className="font-head text-2xl">Send us a message</div>
